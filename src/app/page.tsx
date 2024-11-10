@@ -1,101 +1,88 @@
+// import Image from "next/image";
 import Image from "next/image";
+import t from "../locales/en.json";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+    <div className="text-black p-2">
+      <main className="">
+        <section id="billboard" className="md:h-screen mb-24 md:mb-36 relative">
+          <div className="hidden md:grid grid-cols-2 absolute -rotate-90 top-full origin-top-left	" style={{width: "100vh", left: "95%"}}>
+            <div>{t['The OQO (o-cu-o) is a device with wireless sensors that allows for real-time modulation of sounds, lights, and visuals.']}</div>
+            <div>{t['A project by Andrés Berastegui, musician and producer, blending advanced technology with music production.']}</div>
+          </div>
+          <div className="block md:flex justify-center items-center h-full">
+            <svg className="w-full h-auto" width="474" height="474" viewBox="0 0 474 474" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="237" cy="237" r="237" fill="black"/>
+            </svg>
+            <svg className="w-full h-auto" width="474" height="475" viewBox="0 0 474 475" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fillRule="evenodd" clipRule="evenodd" d="M237 474.333C367.891 474.333 474 368.225 474 237.333C474 106.442 367.891 0.333252 237 0.333252C106.109 0.333252 0 106.442 0 237.333C0 368.225 106.109 474.333 237 474.333ZM232.496 238.043L401.395 406.941L405.638 402.699L236.739 233.8L232.496 238.043Z" fill="black"/>
+            </svg>
+            <svg className="w-full h-auto" width="474" height="474" viewBox="0 0 474 474" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="237" cy="237" r="237" fill="black"/>
+            </svg>
+          </div>
+          <h1 className="block md:absolute text-2xl md:text-4xl md:w-8/12 top-0">{t['The OQO (o-cu-o) is a device with wireless sensors that allows for real-time modulation of sounds, lights, and visuals.']}</h1>
+        </section>
+        <section id="video" className="mb-24 md:mb-36">
+          <video className="w-full md:w-10/12" controls preload="none">
+            <source src="/oqo-video.mp4" type="video/mp4" />
+            <track
+              src="/path/to/captions.vtt"
+              kind="subtitles"
+              srcLang="en"
+              label="English"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+            Your browser does not support the video tag.
+          </video>
+        </section>
+        <section id="about" className="mb-24 md:mb-36">
+          <div className="md:grid grid-cols-2">
+            <div>
+              <h2 className="mb-2 text-sm">{t['About']}</h2>
+            </div>
+            <div>
+              <p>{t['OQO is not just a product but an ever-evolving artistic project. Its purpose is to break the traditional boundaries of audiovisual control, exploring new forms of interaction between sound, light, and movement. Through the use of wireless sensors and technological innovation, OQO offers an experimental and creative approach that opens the door to immersive sensory experiences.']}</p>
+              <p>{t['It’s not just about technology, but about how it can redefine the connection between artists and audiences, creating an audiovisual experience that challenges conventional approaches to live performances.']}</p>
+            </div>
+          </div>
+        </section>
+        <section id="photos" className="mb-24 md:mb-36">
+          <div className="md:grid grid-cols-2 gap-2">
+              <Image className="w-full" src="/photo1.jpg" alt="O" width={474} height={474} />
+              <Image className="w-full" src="/photo2.jpg" alt="Q" width={474} height={475} />
+          </div>
+        </section>
+        <section id="project" className="mb-24 md:mb-36">
+        <h2 className="mb-24 md:mb-36 text-2xl md:text-4xl">{t['Leveraging the advances in new technologies and the development of more efficient sensors, OQO introduces a new approach to audiovisual control.']}</h2>
+          <div className="md:grid grid-cols-2">
+            <h2 className="mb-2 text-sm">{t['The Project']}</h2>
+            <div className="mb-24 md:mb-36">
+              <p>{t['Developed throughout 2023, this innovative design incorporates sensors held by magnets in a vertical and transparent structure.']}</p>
+              <p>{t['Each sensor can be programmed to control sound effects, lights, or visuals, and is integrated into a knob with a visual and illuminated position indicator for easier handling. Assigned parameters can be adjusted by turning the knob on its axis or moving it in the air, allowing for direct interaction with the performer’s body.']}</p>
+              <p>{t['A distinctive feature of OQO is the ability to connect the knobs to each other using magnets, opening up new possibilities for live control. This allows multiple parameters to be adjusted simultaneously with each hand, offering a novel and creative form of interaction.']}</p>
+              <p>{t['The vertical design of the module promotes a more ergonomic posture, and being completely transparent, it creates no visual barrier between the performer and the audience, allowing for a fluid and direct connection during the performance. All information generated by the knobs is transmitted wirelessly to a computer, synthesizer, or other MIDI-compatible devices.']}</p>
+              <p className="text-sm">{t['** All these innovations have been registered with the Spanish Patent and Trademark Office (OEPM) as of January 2024.']}</p>
+            </div>
+          </div>
+          <div className="flex justify-center items-center mb-24 md:mb-36">
+            <Image className="w-8/12" src="/oqo.jpg" alt="Q" width={474} height={475} />
+          </div>
+          <h2 className="mb-24 md:mb-36 text-2xl md:text-4xl">{t['It’s not just about technology, but about how it can redefine the connection between artists and audiences, creating an audiovisual experience that challenges conventional approaches to live performances.']}</h2>  
+        </section>
+        <section id="andres">
+        <div className="md:grid grid-cols-2">
+            <div>
+              <h2>{t['About Andrés']}</h2>
+            </div>
+            <div>
+              <p>{t['Born in Argentina and living in Barcelona since 2018. Throughout his career, he has explored the fusion of sounds and technology, using sensors and experimental tools to develop innovative concepts. His focus is always on discovering new ways of sound execution and modulation.']}</p>
+            </div>
+          </div>
+        </section>
+        <footer>
+        </footer>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
