@@ -24,7 +24,7 @@ export default function Home() {
           </div>
           <h1 className="block md:absolute text-2xl md:text-4xl md:w-8/12 top-0">{t['The OQO (o-cu-o) is a device with wireless sensors that allows for real-time modulation of sounds, lights, and visuals.']}</h1>
         </section>
-        <section id="video" className="mb-24 md:mb-36">
+        {/* <section id="video" className="mb-24 md:mb-36">
           <video className="w-full md:w-10/12" controls preload="none">
             <source src="/oqo-video.mp4" type="video/mp4" />
             <track
@@ -35,7 +35,7 @@ export default function Home() {
             />
             Your browser does not support the video tag.
           </video>
-        </section>
+        </section> */}
         <section id="about" className="mb-24 md:mb-36">
           <div className="md:grid grid-cols-2">
             <div>
