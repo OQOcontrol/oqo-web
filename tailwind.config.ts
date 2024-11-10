@@ -7,6 +7,13 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontSize: {
+      '4xl': ['36px', {
+        lineHeight: '40px',
+        letterSpacing: '-0.01em',
+        fontWeight: '350',
+      }],
+    },
     extend: {
       colors: {
         grey: "#968E83",
