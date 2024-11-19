@@ -19,8 +19,8 @@ const Project = ({t}: ProjectProps) => {
         rotation: 0,
       scrollTrigger: {
         trigger: "#project",
-        start: "top 20%",
-        end: "bottom 20%",
+        start: "top 10%",
+        end: "bottom 10%",
         scrub: true,
       },
     });
