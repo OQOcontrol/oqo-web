@@ -11,18 +11,18 @@ const ABC = localFont({ src: 'fonts/ABCMarist-Book.otf', variable: '--font-abc' 
 
 export default function Home() {
   return (
-    <div className={`text-black p-2 ${saansRegular.variable} ${saansMono.variable} ${ABC.variable} font-saans`}>
+    <div className={`text-black px-2 ${saansRegular.variable} ${saansMono.variable} ${ABC.variable} font-saans`}>
       <main className="">
-        <section id="billboard" className="md:h-screen mb-24 md:mb-36 relative">
-          <div className="hidden md:grid grid-cols-2 absolute -rotate-90 top-full origin-top-left	font-saansMono text-grey" style={{width: "100vh", left: "95%"}}>
-            <div className="text-xs leading-tight">
+        <section id="billboard" className="md:h-screen mb-24 md:mb-36 relative py-2">
+          <div className="hidden px-2 md:grid grid-cols-2 gap-2 absolute -rotate-90 top-full origin-top-left	font-saansMono text-grey" style={{width: "100vh", left: "95%"}}>
+            <div className="text-xs pr-16 leading-tight">
               <span>{t['The']}</span>
               <span className="font-saans">{t[' OQO ']}</span>
               <span>{t['(o-cu-o) is a device with wireless sensors that allows for real-time modulation of sounds, lights, and visuals.']}</span>
             </div>
-            <div className="text-xs">{t['A project by Andrés Berastegui, musician and producer, blending advanced technology with music production.']}</div>
+            <div className="text-xs pr-16">{t['A project by Andrés Berastegui, musician and producer, blending advanced technology with music production.']}</div>
           </div>
-          <div className="block md:flex justify-center items-center h-full mb-10 md:mb-0">
+          <div className="block md:flex justify-center items-end h-full mb-10 md:mb-0">
             <svg className="w-7/12 md:w-full mx-auto h-auto" width="474" height="474" viewBox="0 0 474 474" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="237" cy="237" r="237" fill="black"/>
             </svg>
@@ -41,7 +41,7 @@ export default function Home() {
         </section>
         <Video />
         <section id="about" className="mb-24 md:mb-36">
-          <div className="md:grid grid-cols-2">
+          <div className="md:grid grid-cols-2 gap-2">
             <div>
               <h2 className="mb-4 text-xs font-saansMono">{t['About']}</h2>
             </div>
@@ -59,7 +59,7 @@ export default function Home() {
         </section>
         <Project t={t} />
         <section id="andres">
-        <div className="md:grid grid-cols-2 mb-24 md:mb-36">
+        <div className="md:grid grid-cols-2 gap-2 mb-24 md:mb-36">
             <div>
               <h2 className="mb-4 text-xs font-saansMono">{t['About Andrés']}</h2>
             </div>
@@ -69,8 +69,19 @@ export default function Home() {
           </div>
         </section>
         <footer>
-          <div className="grid grid-cols-3 w-full">
-            <div className="text-4xl mb-10 w-full">(o-cu-o)</div>
+          <div className="grid grid-cols-4 w-full gap-2">
+            <div className="text-4xl mb-10 w-full col-span-2 flex gap-10 h-fit align-center">
+              <svg width="264" height="88" viewBox="0 0 264 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="88" height="88" rx="44" fill="black"/>
+                <path d="M44.0165 56.2507C37.2014 56.2507 32.2812 51.0978 32.2812 43.9835C32.2812 36.9024 37.2014 31.7495 44.0165 31.7495C50.7652 31.7495 55.7186 36.8692 55.7186 43.9835C55.7186 51.131 50.7652 56.2507 44.0165 56.2507ZM43.9833 53.7906C49.1694 53.7906 52.8928 49.6683 52.8928 43.9835C52.8928 38.3319 49.1694 34.2096 43.9833 34.2096C38.8304 34.2096 35.107 38.3319 35.107 43.9835C35.107 49.6683 38.8304 53.7906 43.9833 53.7906Z" fill="white"/>
+                <rect x="88" width="88" height="88" rx="44" fill="black"/>
+                <path d="M132.017 55.6855C125.201 55.6855 120.281 50.5326 120.281 43.4183C120.281 36.3372 125.201 31.1843 132.017 31.1843C138.765 31.1843 143.719 36.304 143.719 43.4183C143.719 47.0419 142.455 50.1337 140.294 52.3278L142.954 55.2533L141.159 56.8158L138.466 53.857C136.638 55.0206 134.443 55.6855 132.017 55.6855ZM131.95 46.7095L133.778 45.1137L138.499 50.3331C139.995 48.6044 140.893 46.1776 140.893 43.4183C140.893 37.7667 137.169 33.6444 131.983 33.6444C126.83 33.6444 123.107 37.7667 123.107 43.4183C123.107 49.1031 126.83 53.2254 131.983 53.2254C133.745 53.2254 135.341 52.76 136.671 51.8956L131.95 46.7095Z" fill="white"/>
+                <rect x="176" width="88" height="88" rx="44" fill="black"/>
+                <path d="M220.017 56.2507C213.201 56.2507 208.281 51.0978 208.281 43.9835C208.281 36.9024 213.201 31.7495 220.017 31.7495C226.765 31.7495 231.719 36.8692 231.719 43.9835C231.719 51.131 226.765 56.2507 220.017 56.2507ZM219.983 53.7906C225.169 53.7906 228.893 49.6683 228.893 43.9835C228.893 38.3319 225.169 34.2096 219.983 34.2096C214.83 34.2096 211.107 38.3319 211.107 43.9835C211.107 49.6683 214.83 53.7906 219.983 53.7906Z" fill="white"/>
+              </svg>
+
+              <span>(o-cu-o)</span>
+            </div>
             <div className="flex flex-col justify-between h-full mb-10 md:mb-0">
               <div className="font-saansMono mb-2 text-xs">A project by Andrés Berastegui</div>
               <div>
