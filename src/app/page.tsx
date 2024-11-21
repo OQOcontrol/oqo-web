@@ -47,7 +47,7 @@ export default function Home() {
         <footer className="mb-7">
           <div className="md:grid grid-cols-4 w-full gap-4">
             <div className="text-4xl mb-10 w-full col-span-2 flex gap-4 md:gap-10 h-fit items-center">
-              <svg className="w-7/12 md:w-full" width="264" height="88" viewBox="0 0 264 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg className="w-7/12 md:w-auto" width="264" height="88" viewBox="0 0 264 88" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="88" height="88" rx="44" fill="black"/>
                 <path d="M44.0165 56.2507C37.2014 56.2507 32.2812 51.0978 32.2812 43.9835C32.2812 36.9024 37.2014 31.7495 44.0165 31.7495C50.7652 31.7495 55.7186 36.8692 55.7186 43.9835C55.7186 51.131 50.7652 56.2507 44.0165 56.2507ZM43.9833 53.7906C49.1694 53.7906 52.8928 49.6683 52.8928 43.9835C52.8928 38.3319 49.1694 34.2096 43.9833 34.2096C38.8304 34.2096 35.107 38.3319 35.107 43.9835C35.107 49.6683 38.8304 53.7906 43.9833 53.7906Z" fill="white"/>
                 <rect x="88" width="88" height="88" rx="44" fill="black"/>
