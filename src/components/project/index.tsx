@@ -24,12 +24,24 @@ const Project = ({t}: ProjectProps) => {
         scrub: true,
       },
     });
+    gsap.fromTo(".knob3", {
+        rotation: -90,
+    },
+    {
+      rotation: 90,
+      scrollTrigger: {
+      trigger: "#promo",
+      start: "top 10%",
+      end: "bottom 10%",
+      scrub: true,
+    },
+  });
   });
 
   return (
     <section id="project" className="mb-24 md:mb-36">
     <h2 className="mb-24 md:mb-36 text-2xl md:text-4xl leading-tight md:md:w-10/12 font-abc">{t['Leveraging the advances in new technologies and the development of more efficient sensors, OQO introduces a new approach to audiovisual control.']}</h2>
-      <div className="md:grid grid-cols-2 relative">
+      <div className="md:grid grid-cols-2 gap-4 relative">
         <h2 className="mb-4 text-xs font-saansMono">{t['The Project']}</h2>
         <div className="mb-24 md:mb-36">
           <p className="mb-4 text-l md:text-xl leading-tight">{t['Developed throughout 2023, this innovative design incorporates sensors held by magnets in a vertical and transparent structure.']}</p>
@@ -45,9 +57,9 @@ const Project = ({t}: ProjectProps) => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center mb-24 md:mb-36 relative">
+      <div id="promo" className="flex justify-center items-center mb-24 md:mb-36 relative">
         <Image className="w-full md:w-6/12" src="/oqo.jpg" alt="Q" width={474} height={475} />
-        <svg className="hidden md:block absolute bottom-0 right-0 -rotate-90" width="211" height="211" viewBox="0 0 211 211" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="knob3 hidden md:block absolute bottom-0 right-0 -rotate-90" width="211" height="211" viewBox="0 0 211 211" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="105.5" cy="105.5" r="102.5" transform="rotate(-90 105.5 105.5)" stroke="black" strokeWidth="6"/>
           <path d="M107 111L182 35" stroke="black" strokeWidth="6"/>
         </svg>

@@ -4,6 +4,7 @@ import t from "../locales/en.json";
 import localFont from 'next/font/local'
 import Video from "../components/video";
 import Project from "@/components/project";
+import Billboard from "@/components/billboard";
 
 const saansRegular = localFont({ src: '/fonts/SaansRegular.otf', variable: '--font-saans', });
 const saansMono = localFont({ src: 'fonts/SaansMonoRegular.otf', variable: '--font-saans-mono' });
@@ -13,35 +14,10 @@ export default function Home() {
   return (
     <div className={`text-black px-2 ${saansRegular.variable} ${saansMono.variable} ${ABC.variable} font-saans`}>
       <main className="">
-        <section id="billboard" className="md:h-screen mb-24 md:mb-36 relative py-2">
-          <div className="hidden px-2 md:grid grid-cols-2 gap-2 absolute -rotate-90 top-full origin-top-left	font-saansMono text-grey" style={{width: "100vh", left: "95%"}}>
-            <div className="text-xs pr-16 leading-tight">
-              <span>{t['The']}</span>
-              <span className="font-saans">{t[' OQO ']}</span>
-              <span>{t['(o-cu-o) is a device with wireless sensors that allows for real-time modulation of sounds, lights, and visuals.']}</span>
-            </div>
-            <div className="text-xs pr-16">{t['A project by Andrés Berastegui, musician and producer, blending advanced technology with music production.']}</div>
-          </div>
-          <div className="block md:flex justify-center items-end h-full mb-10 md:mb-0">
-            <svg className="w-7/12 md:w-full mx-auto h-auto" width="474" height="474" viewBox="0 0 474 474" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="237" cy="237" r="237" fill="black"/>
-            </svg>
-            <svg className="w-7/12 md:w-full mx-auto h-auto" width="474" height="475" viewBox="0 0 474 475" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fillRule="evenodd" clipRule="evenodd" d="M237 474.333C367.891 474.333 474 368.225 474 237.333C474 106.442 367.891 0.333252 237 0.333252C106.109 0.333252 0 106.442 0 237.333C0 368.225 106.109 474.333 237 474.333ZM232.496 238.043L401.395 406.941L405.638 402.699L236.739 233.8L232.496 238.043Z" fill="black"/>
-            </svg>
-            <svg className="w-7/12 md:w-full mx-auto h-auto" width="474" height="474" viewBox="0 0 474 474" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="237" cy="237" r="237" fill="black"/>
-            </svg>
-          </div>
-          <h1 className="block md:absolute text-2xl md:text-4xl md:w-8/12 top-0 font-abc leading-tight">
-            <span>{t['The']}</span>
-            <span className="font-saans">{t[' OQO ']}</span>
-            <span>{t['(o-cu-o) is a device with wireless sensors that allows for real-time modulation of sounds, lights, and visuals.']}</span>
-          </h1>
-        </section>
+        <Billboard t={t} />
         <Video />
         <section id="about" className="mb-24 md:mb-36">
-          <div className="md:grid grid-cols-2 gap-2">
+          <div className="md:grid grid-cols-2 gap-4">
             <div>
               <h2 className="mb-4 text-xs font-saansMono">{t['About']}</h2>
             </div>
@@ -52,14 +28,14 @@ export default function Home() {
           </div>
         </section>
         <section id="photos" className="mb-24 md:mb-36">
-          <div className="md:grid grid-cols-2 gap-2">
+          <div className="md:grid grid-cols-2 gap-4">
               <Image className="w-full" src="/photo1.jpg" alt="O" width={474} height={474} />
               <Image className="w-full" src="/photo2.jpg" alt="Q" width={474} height={475} />
           </div>
         </section>
         <Project t={t} />
         <section id="andres">
-        <div className="md:grid grid-cols-2 gap-2 mb-24 md:mb-36">
+        <div className="md:grid grid-cols-2 gap-4 mb-24 md:mb-64">
             <div>
               <h2 className="mb-4 text-xs font-saansMono">{t['About Andrés']}</h2>
             </div>
@@ -68,10 +44,10 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <footer>
-          <div className="grid grid-cols-4 w-full gap-2">
-            <div className="text-4xl mb-10 w-full col-span-2 flex gap-10 h-fit align-center">
-              <svg width="264" height="88" viewBox="0 0 264 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <footer className="mb-7">
+          <div className="md:grid grid-cols-4 w-full gap-4">
+            <div className="text-4xl mb-10 w-full col-span-2 flex gap-4 md:gap-10 h-fit items-center">
+              <svg className="w-7/12 md:w-full" width="264" height="88" viewBox="0 0 264 88" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="88" height="88" rx="44" fill="black"/>
                 <path d="M44.0165 56.2507C37.2014 56.2507 32.2812 51.0978 32.2812 43.9835C32.2812 36.9024 37.2014 31.7495 44.0165 31.7495C50.7652 31.7495 55.7186 36.8692 55.7186 43.9835C55.7186 51.131 50.7652 56.2507 44.0165 56.2507ZM43.9833 53.7906C49.1694 53.7906 52.8928 49.6683 52.8928 43.9835C52.8928 38.3319 49.1694 34.2096 43.9833 34.2096C38.8304 34.2096 35.107 38.3319 35.107 43.9835C35.107 49.6683 38.8304 53.7906 43.9833 53.7906Z" fill="white"/>
                 <rect x="88" width="88" height="88" rx="44" fill="black"/>
@@ -79,56 +55,68 @@ export default function Home() {
                 <rect x="176" width="88" height="88" rx="44" fill="black"/>
                 <path d="M220.017 56.2507C213.201 56.2507 208.281 51.0978 208.281 43.9835C208.281 36.9024 213.201 31.7495 220.017 31.7495C226.765 31.7495 231.719 36.8692 231.719 43.9835C231.719 51.131 226.765 56.2507 220.017 56.2507ZM219.983 53.7906C225.169 53.7906 228.893 49.6683 228.893 43.9835C228.893 38.3319 225.169 34.2096 219.983 34.2096C214.83 34.2096 211.107 38.3319 211.107 43.9835C211.107 49.6683 214.83 53.7906 219.983 53.7906Z" fill="white"/>
               </svg>
-
               <span>(o-cu-o)</span>
             </div>
             <div className="flex flex-col justify-between h-full mb-10 md:mb-0">
-              <div className="font-saansMono mb-2 text-xs">A project by Andrés Berastegui</div>
               <div>
-                <div className="font-saansMono text-xs"><a href="mailto:andres@oqo.com">andres@oqo.com</a></div>
-                <div className="font-saansMono text-xs"><a href="tel:+34 666000000">+34 666 00 00 00</a></div>
-                <div className="font-saansMono text-xs"><a href="https://www.instagram.com/oqocontrol/">@oqocontrol</a></div>
+                <div className="font-saansMono mb-4 text-xs">
+                  <div>A project by</div>
+                  <div>Andrés Berastegui</div>
+                </div>
+                <div>
+                  <div className="font-saansMono text-xs"><a href="mailto:andres@oqo.com">andres@oqo.com</a></div>
+                  <div className="font-saansMono text-xs"><a href="tel:+34 666000000">+34 666 00 00 00</a></div>
+                  <div className="font-saansMono text-xs"><a href="https://www.instagram.com/oqocontrol/">@oqocontrol</a></div>
+                </div>
+              </div>
+              <div>
+                <div className="font-saansMono text-xs">©2024 OQO.</div>
+                <div className="font-saansMono text-xs">All rights reserved</div>
               </div>
             </div>
             <div className="mb-0">
-              <div className="font-saansMono mb-2 text-xs">This project is a collective effort made possible by the creativity and dedication of our team</div>
-              <div className="font-saansMono mb-2 text-xs">
+              <div className="font-saansMono mb-4 text-xs">This project is a collective effort made possible by the creativity and dedication of our team</div>
+              <div className="font-saansMono mb-4 text-xs">
                 <div>Phantasia Services</div>
                 <div className="text-grey">Creative Direction & Design</div>
               </div>
-              <div className="font-saansMono mb-2 text-xs">
+              <div className="font-saansMono mb-4 text-xs">
                 <div>Dani Martinez</div>
                 <div className="text-grey">Film Direction & DOP</div>
               </div>
-              <div className="font-saansMono mb-2 text-xs">
+              <div className="font-saansMono mb-4 text-xs">
+                <div>Martí Bescós</div>
+                <div className="text-grey">Gaffer</div>
+              </div>
+              <div className="font-saansMono mb-4 text-xs">
                 <div>Jana Travé</div>
                 <div className="text-grey">Dancer</div>
               </div>
-              <div className="font-saansMono mb-2 text-xs">
+              <div className="font-saansMono mb-4 text-xs">
                 <div>Sara Lee</div>
                 <div className="text-grey">Skater</div>
               </div>
-              <div className="font-saansMono mb-2 text-xs">
+              <div className="font-saansMono mb-4 text-xs">
                 <div>Andrés Berastegui</div>
                 <div className="text-grey">Concept & Sound Design</div>
               </div>
-              <div className="font-saansMono mb-2 text-xs">
+              <div className="font-saansMono mb-4 text-xs">
                 <div>Levin Mendez</div>
                 <div className="text-grey">VFX</div>
               </div>
-              <div className="font-saansMono mb-2 text-xs">
+              <div className="font-saansMono mb-4 text-xs">
                 <div>Anna Gudayol</div>
                 <div className="text-grey">Photography</div>
               </div>
-              <div className="font-saansMono mb-2 text-xs">
+              <div className="font-saansMono mb-4 text-xs">
                 <div>cmnd.services</div>
                 <div className="text-grey">Photo Assistant</div>
               </div>
-              <div className="font-saansMono mb-2 text-xs">
+              <div className="font-saansMono mb-4 text-xs">
                 <div>Pol Carrizo</div>
                 <div className="text-grey">Knob 3D Print</div>
               </div>
-              <div className="font-saansMono mb-2 text-xs">
+              <div className="font-saansMono mb-4 text-xs">
                 <div>VZTec</div>
                 <div className="text-grey">Programming Assistance</div>
               </div>
