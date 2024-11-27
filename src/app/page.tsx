@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Image from "next/image";
 import t from "../locales/en.json";
 
@@ -10,20 +11,29 @@ const saansRegular = localFont({ src: '/fonts/SaansRegular.otf', variable: '--fo
 const saansMono = localFont({ src: 'fonts/SaansMonoRegular.otf', variable: '--font-saans-mono' });
 const ABC = localFont({ src: 'fonts/ABCMarist-Book.otf', variable: '--font-abc' });
 
+ 
+export const metadata: Metadata = {
+  title: "OQO",
+  description: t['The OQO (o-cu-o) is a device with wireless sensors that allows for real-time modulation of sounds, lights, and visuals.'],
+}
+
 export default function Home() {
   return (
     <div className={`text-black px-2 ${saansRegular.variable} ${saansMono.variable} ${ABC.variable} font-saans`}>
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <main className="">
         <Billboard t={t} />
         <Video />
         <section id="about" className="mb-24 md:mb-36">
           <div className="md:grid grid-cols-2 gap-4">
             <div>
-              <h2 className="mb-4 text-xs font-saansMono">{t['About']}</h2>
+              <h2 className="mb-4 text-xs md:text-sm 2xl:text-md font-saansMono">{t['About']}</h2>
             </div>
             <div>
-              <p className="mb-4 text-l md:text-xl leading-tight">{t['OQO is not a product but an ever-evolving artistic project. Its purpose is to break the traditional boundaries of audiovisual control, exploring new forms of interaction between sound, light, and movement. Through the use of wireless sensors and technological innovation, OQO offers an experimental and creative approach that opens the door to immersive sensory experiences.']}</p>
-              <p className="mb-4 text-l md:text-xl leading-tight">{t['It’s not just about technology, but about how it can redefine the connection between artists and audiences, creating an audiovisual experience that challenges conventional approaches to live performances.']}</p>
+              <p className="mb-4 text-l md:text-xl 2xl:text-2xl leading-tight">{t['OQO is not a product but an ever-evolving artistic project. Its purpose is to break the traditional boundaries of audiovisual control, exploring new forms of interaction between sound, light, and movement. Through the use of wireless sensors and technological innovation, OQO offers an experimental and creative approach that opens the door to immersive sensory experiences.']}</p>
+              <p className="mb-4 text-l md:text-xl 2xl:text-2xl leading-tight">{t['It’s not just about technology, but about how it can redefine the connection between artists and audiences, creating an audiovisual experience that challenges conventional approaches to live performances.']}</p>
             </div>
           </div>
         </section>
@@ -37,10 +47,10 @@ export default function Home() {
         <section id="andres">
         <div className="md:grid grid-cols-2 gap-4 mb-24 md:mb-64">
             <div>
-              <h2 className="mb-4 text-xs font-saansMono">{t['About Andrés']}</h2>
+              <h2 className="mb-4 text-xs md:text-sm 2xl:text-md font-saansMono">{t['About Andrés']}</h2>
             </div>
             <div>
-              <p className="mb-4 text-l md:text-xl leading-tight">{t['Born in Argentina and living in Barcelona since 2018. Throughout his career, he has explored the fusion of sounds and technology, using sensors and experimental tools to develop innovative concepts. His focus is always on discovering new ways of sound execution and modulation.']}</p>
+              <p className="mb-4 text-l md:text-xl 2xl:text-2xl leading-tight">{t['Born in Argentina and living in Barcelona since 2018. Throughout his career, he has explored the fusion of sounds and technology, using sensors and experimental tools to develop innovative concepts. His focus is always on discovering new ways of sound execution and modulation.']}</p>
             </div>
           </div>
         </section>
@@ -59,68 +69,68 @@ export default function Home() {
             </div>
             <div className="flex flex-col justify-between h-full mb-10 md:mb-0">
               <div>
-                <div className="font-saansMono mb-4 text-xs">
+                <div className="font-saansMono mb-4 text-xs md:text-sm 2xl:text-md">
                   <div>A project by</div>
                   <div>Andrés Berastegui</div>
                 </div>
                 <div>
-                  <div className="font-saansMono text-xs"><a href="mailto:andres@oqo.com">andres@oqo.com</a></div>
-                  <div className="font-saansMono text-xs"><a href="tel:+34 666000000">+34 666 00 00 00</a></div>
-                  <div className="font-saansMono text-xs"><a href="https://www.instagram.com/oqocontrol/">@oqocontrol</a></div>
+                  <div className="font-saansMono text-xs md:text-sm 2xl:text-md"><a href="mailto:andres@oqo.com">andres@oqo.com</a></div>
+                  <div className="font-saansMono text-xs md:text-sm 2xl:text-md"><a href="tel:+34 666000000">+34 666 00 00 00</a></div>
+                  <div className="font-saansMono text-xs md:text-sm 2xl:text-md"><a href="https://www.instagram.com/oqocontrol/">@oqocontrol</a></div>
                 </div>
               </div>
               <div>
-                <div className="font-saansMono text-xs">©2024 OQO.</div>
-                <div className="font-saansMono text-xs">All rights reserved</div>
+                <div className="font-saansMono text-xs md:text-sm 2xl:text-md">©2024 OQO.</div>
+                <div className="font-saansMono text-xs md:text-sm 2xl:text-md">All rights reserved</div>
               </div>
             </div>
             <div className="mb-0">
-              <div className="font-saansMono mb-4 text-xs">This project is a collective effort made possible by the creativity and dedication of our team</div>
-              <div className="font-saansMono mb-4 text-xs">
+              <div className="font-saansMono mb-4 text-xs md:text-sm 2xl:text-md">This project is a collective effort made possible by the creativity and dedication of our team</div>
+              <div className="font-saansMono mb-4 text-xs md:text-sm 2xl:text-md">
                 <div>Phantasia Services</div>
                 <div className="text-grey">Creative Direction & Design</div>
               </div>
-              <div className="font-saansMono mb-4 text-xs">
+              <div className="font-saansMono mb-4 text-xs md:text-sm 2xl:text-md">
                 <div>Dani Martinez</div>
                 <div className="text-grey">Film Direction & DOP</div>
               </div>
-              <div className="font-saansMono mb-4 text-xs">
+              <div className="font-saansMono mb-4 text-xs md:text-sm 2xl:text-md">
                 <div>Martí Bescós</div>
                 <div className="text-grey">Gaffer</div>
               </div>
-              <div className="font-saansMono mb-4 text-xs">
+              <div className="font-saansMono mb-4 text-xs md:text-sm 2xl:text-md">
                 <div>Jana Travé</div>
                 <div className="text-grey">Dancer</div>
               </div>
-              <div className="font-saansMono mb-4 text-xs">
+              <div className="font-saansMono mb-4 text-xs md:text-sm 2xl:text-md">
                 <div>Sara Lee</div>
                 <div className="text-grey">Skater</div>
               </div>
-              <div className="font-saansMono mb-4 text-xs">
+              <div className="font-saansMono mb-4 text-xs md:text-sm 2xl:text-md">
                 <div>Andrés Berastegui</div>
                 <div className="text-grey">Concept & Sound Design</div>
               </div>
-              <div className="font-saansMono mb-4 text-xs">
+              <div className="font-saansMono mb-4 text-xs md:text-sm 2xl:text-md">
                 <div>Levin Mendez</div>
                 <div className="text-grey">VFX</div>
               </div>
-              <div className="font-saansMono mb-4 text-xs">
+              <div className="font-saansMono mb-4 text-xs md:text-sm 2xl:text-md">
                 <div>Anna Gudayol</div>
                 <div className="text-grey">Photography</div>
               </div>
-              <div className="font-saansMono mb-4 text-xs">
+              <div className="font-saansMono mb-4 text-xs md:text-sm 2xl:text-md">
                 <div>cmnd.services</div>
                 <div className="text-grey">Photo Assistant</div>
               </div>
-              <div className="font-saansMono mb-4 text-xs">
+              <div className="font-saansMono mb-4 text-xs md:text-sm 2xl:text-md">
                 <div>Pol Carrizo</div>
                 <div className="text-grey">Knob 3D Print</div>
               </div>
-              <div className="font-saansMono mb-4 text-xs">
+              <div className="font-saansMono mb-4 text-xs md:text-sm 2xl:text-md">
                 <div>VZTec</div>
                 <div className="text-grey">Programming Assistance</div>
               </div>
-              <div className="font-saansMono text-xs">
+              <div className="font-saansMono text-xs md:text-sm 2xl:text-md">
                 <div>Nicolás Mata</div>
                 <div className="text-grey">Web Development</div>
               </div>

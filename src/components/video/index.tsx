@@ -59,7 +59,7 @@ export const CustomVideoPlayer = ({url, poster}: {url: string, poster: string}) 
     <div className="relative md:aspect-[4/3] md:w-8/12">
       {/* Video Element */}
       <video
-        className="w-full" controls preload="none" poster={poster}
+        className="w-full" controls={isPlaying} preload="none" poster={poster}
         ref={videoRef}
         onClick={togglePlay}
       >
