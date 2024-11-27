@@ -15,6 +15,9 @@ const ABC = localFont({ src: 'fonts/ABCMarist-Book.otf', variable: '--font-abc' 
 export const metadata: Metadata = {
   title: "OQO",
   description: t['The OQO (o-cu-o) is a device with wireless sensors that allows for real-time modulation of sounds, lights, and visuals.'],
+  openGraph: {
+    images: '/poster.jpg',
+  },
 }
 
 export default function Home() {
