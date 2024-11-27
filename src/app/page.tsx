@@ -22,7 +22,7 @@ export default function Home() {
               <h2 className="mb-4 text-xs font-saansMono">{t['About']}</h2>
             </div>
             <div>
-              <p className="mb-4 text-l md:text-xl leading-tight">{t['OQO is not just a product but an ever-evolving artistic project. Its purpose is to break the traditional boundaries of audiovisual control, exploring new forms of interaction between sound, light, and movement. Through the use of wireless sensors and technological innovation, OQO offers an experimental and creative approach that opens the door to immersive sensory experiences.']}</p>
+              <p className="mb-4 text-l md:text-xl leading-tight">{t['OQO is not a product but an ever-evolving artistic project. Its purpose is to break the traditional boundaries of audiovisual control, exploring new forms of interaction between sound, light, and movement. Through the use of wireless sensors and technological innovation, OQO offers an experimental and creative approach that opens the door to immersive sensory experiences.']}</p>
               <p className="mb-4 text-l md:text-xl leading-tight">{t['It’s not just about technology, but about how it can redefine the connection between artists and audiences, creating an audiovisual experience that challenges conventional approaches to live performances.']}</p>
             </div>
           </div>
@@ -45,7 +45,7 @@ export default function Home() {
           </div>
         </section>
         <footer className="mb-7">
-          <div className="md:grid grid-cols-4 w-full gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 w-full gap-4">
             <div className="text-4xl mb-10 w-full col-span-2 flex gap-4 md:gap-10 h-fit items-center">
               <svg className="w-7/12 md:w-auto" width="264" height="88" viewBox="0 0 264 88" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="88" height="88" rx="44" fill="black"/>

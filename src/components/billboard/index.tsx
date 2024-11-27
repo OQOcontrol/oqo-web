@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -27,9 +27,27 @@ const Billboard = ({ t }: { t: Record<string, string> }) => {
           )
       });
 
+
+      const elementRef = useRef<HTMLDivElement | null>(null); // Reference to the element
+      const [height, setHeight] = useState<number>(0); // State for height
+    
+      useEffect(() => {
+        const observer = new ResizeObserver(() => {
+          if (elementRef.current) {
+            setHeight(elementRef.current.offsetHeight);
+          }
+        });
+    
+        if (elementRef.current) {
+          observer.observe(elementRef.current); // Start observing the element
+        }
+    
+        return () => observer.disconnect(); // Cleanup observer on unmount
+      }, []);
+
   return (
     <section id="billboard" className="md:h-screen mb-24 md:mb-36 relative py-2">
-    <div className="hidden px-2 md:grid grid-cols-2 gap-4 absolute -rotate-90 top-full origin-top-left	font-saansMono text-grey" style={{width: "100vh", left: "95%"}}>
+    <div ref={elementRef} className="hidden px-2 md:grid grid-cols-2 gap-4 absolute -rotate-90 top-full origin-top-left	font-saansMono text-grey" style={{width: "100vh", left: `calc(100% - ${height}px)`}}>
       <div className="text-xs pr-16 leading-tight">
         <span>{t['The']}</span>
         <span className="font-saans">{t[' OQO ']}</span>
