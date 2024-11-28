@@ -49,6 +49,19 @@ const Project = ({t}: ProjectProps) => {
       scrub: true,
     },
     });
+
+    gsap.fromTo(".strech2", {
+      transform: 'scale(1, 7)',
+    },
+    {
+      transform: 'scale(1, 1)',
+      scrollTrigger: {
+      trigger: "#promo",
+      start: "bottom 90%",
+      end: "bottom 40%",
+      scrub: true,
+    },
+    });
   });
 
   return (
@@ -79,7 +92,7 @@ const Project = ({t}: ProjectProps) => {
           <path d="M107 111L182 35" stroke="black" strokeWidth="6"/>
         </svg>
       </div>
-      <h2 className="mb-24 md:mb-36 text-2xl md:text-4xl 2xl:text-5xl leading-tight md:w-10/12 font-abc">{t['It’s not just about technology, but about how it can redefine the connection between artists and audiences, creating an audiovisual experience that challenges conventional approaches to live performances.']}</h2>  
+      <h2 className="strech2 mb-24 md:mb-36 text-2xl md:text-4xl 2xl:text-5xl leading-tight md:w-10/12 font-abc">{t['It’s not just about technology, but about how it can redefine the connection between artists and audiences, creating an audiovisual experience that challenges conventional approaches to live performances.']}</h2>  
     </section>
   )
 }
