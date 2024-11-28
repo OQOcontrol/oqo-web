@@ -27,21 +27,47 @@ const Billboard = ({ t }: { t: Record<string, string> }) => {
             }
           )
 
-        gsap.fromTo(
-          ".strechTitle",
-          {
-            transform: 'scale(1, 1)',
-          },
-          {
-            transform: 'scale(1, 14)',
-              scrollTrigger: {
-              trigger: "#billboard",
-              start: "top 0",
-              end: "bottom 0",
-              scrub: true,
+
+
+        // add a media query. When it matches, the associated function will run
+        gsap.matchMedia().add("(min-width: 768px)", () => { //desktop code
+
+          gsap.fromTo(
+            ".strechTitle",
+            {
+              transform: 'scale(1, 1)',
             },
-          }
-        )
+            {
+              transform: 'scale(1, 14)',
+                scrollTrigger: {
+                trigger: "#billboard",
+                start: "top 0",
+                end: "bottom 0",
+                scrub: true,
+              },
+            }
+          )
+
+        });
+
+        gsap.matchMedia().add("(max-width: 768px)", () => { //mobile code
+          gsap.fromTo(
+            ".strechTitle",
+            {
+              transform: 'scale(1, 1)',
+            },
+            {
+              transform: 'scale(1, 4)',
+                scrollTrigger: {
+                trigger: "#billboard",
+                start: "30% 20%",
+                end: "160% 20%",
+                scrub: true,
+              },
+            }
+          )
+
+        });
       });
 
 

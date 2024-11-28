@@ -37,30 +37,62 @@ const Project = ({t}: ProjectProps) => {
     },
   });
 
-  gsap.fromTo(".strech", {
-      transform: 'scale(1, 10)',
-    },
-    {
-      transform: 'scale(1, 1)',
-      scrollTrigger: {
-      trigger: "#project",
-      start: "top 50%",
-      end: "70% 50%",
-      scrub: true,
-    },
+  
+  gsap.matchMedia().add("(min-width: 768px)", () => { //desktop code
+    gsap.fromTo(".strech", {
+        transform: 'scale(1, 10)',
+      },
+      {
+        transform: 'scale(1, 1)',
+        scrollTrigger: {
+        trigger: "#project",
+        start: "top 50%",
+        end: "70% 50%",
+        scrub: true,
+      },
+      });
+  
+      gsap.fromTo(".strech2", {
+        transform: 'scale(1, 10)',
+      },
+      {
+        transform: 'scale(1, 1)',
+        scrollTrigger: {
+        trigger: ".strech2",
+        start: "70% 50%",
+        end: "140% 50%",
+        scrub: true,
+      },
+      });
     });
 
-    gsap.fromTo(".strech2", {
-      transform: 'scale(1, 10)',
-    },
-    {
-      transform: 'scale(1, 1)',
-      scrollTrigger: {
-      trigger: ".strech2",
-      start: "70% 50%",
-      end: "140% 50%",
-      scrub: true,
-    },
+    gsap.matchMedia().add("(max-width: 768px)", () => { //mobile code
+      gsap.fromTo(".strech", {
+        transform: 'scale(1, 4)',
+      },
+      {
+        transform: 'scale(1, 1)',
+        scrollTrigger: {
+        trigger: "#project",
+        start: "0 80%",
+        end: "40% 80%",
+        scrub: true,
+      },
+      });
+  
+      gsap.fromTo(".strech2", {
+        transform: 'scale(1, 4)',
+      },
+      {
+        transform: 'scale(1, 1)',
+        scrollTrigger: {
+        trigger: ".strech2",
+        start: "50% 80%",
+        end: "110% 80%",
+        scrub: true,
+      },
+      });
+
     });
   });
 
