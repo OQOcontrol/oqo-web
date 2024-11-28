@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className={`text-black px-2 ${saansRegular.variable} ${saansMono.variable} ${ABC.variable} font-saans`}>
+    <div className={`text-black px-[10px] ${saansRegular.variable} ${saansMono.variable} ${ABC.variable} font-saans`}>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
@@ -41,7 +41,7 @@ export default function Home() {
           </div>
         </section>
         <section id="photos" className="mb-24 md:mb-36">
-          <div className="grid md:grid-cols-2 gap-3 md:gap-4">
+          <div className="grid md:grid-cols-2 gap-[10px]">
               <Image className="w-full" src="/photo3.jpg" alt="O" width={474} height={474} />
               <Image className="w-full" src="/photo4.jpg" alt="Q" width={474} height={475} />
           </div>
