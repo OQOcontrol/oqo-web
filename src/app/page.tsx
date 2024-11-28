@@ -42,8 +42,8 @@ export default function Home() {
         </section>
         <section id="photos" className="mb-24 md:mb-36">
           <div className="md:grid grid-cols-2 gap-4">
-              <Image className="w-full" src="/photo1.jpg" alt="O" width={474} height={474} />
-              <Image className="w-full" src="/photo2.jpg" alt="Q" width={474} height={475} />
+              <Image className="w-full" src="/photo3.jpg" alt="O" width={474} height={474} />
+              <Image className="w-full" src="/photo4.jpg" alt="Q" width={474} height={475} />
           </div>
         </section>
         <Project t={t} />
