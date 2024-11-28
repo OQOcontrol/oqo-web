@@ -23,9 +23,6 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className={`text-black px-[10px] ${saansRegular.variable} ${saansMono.variable} ${ABC.variable} font-saans`}>
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-      </head>
       <main className="">
         <Billboard t={t} />
         <Video />

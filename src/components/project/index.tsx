@@ -74,7 +74,7 @@ const Project = ({t}: ProjectProps) => {
         transform: 'scale(1, 1)',
         scrollTrigger: {
         trigger: "#project",
-        start: "0 80%",
+        start: "-20% 80%",
         end: "40% 80%",
         scrub: true,
       },
@@ -87,7 +87,7 @@ const Project = ({t}: ProjectProps) => {
         transform: 'scale(1, 1)',
         scrollTrigger: {
         trigger: ".strech2",
-        start: "50% 80%",
+        start: "20% 80%",
         end: "110% 80%",
         scrub: true,
       },
