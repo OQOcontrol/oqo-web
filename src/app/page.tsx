@@ -30,7 +30,7 @@ export default function Home() {
         <Billboard t={t} />
         <Video />
         <section id="about" className="mb-24 md:mb-36">
-          <div className="md:grid grid-cols-2 gap-4">
+          <div className="md:grid grid-cols-2 gap-[10px]">
             <div>
               <h2 className="mb-4 text-xs xl:text-sm 2xl:text-md font-saansMono">{t['About']}</h2>
             </div>
@@ -48,7 +48,7 @@ export default function Home() {
         </section>
         <Project t={t} />
         <section id="andres">
-        <div className="md:grid grid-cols-2 gap-4 mb-52 md:mb-64">
+        <div className="md:grid grid-cols-2 gap-[10px] mb-52 md:mb-64">
             <div>
               <h2 className="mb-4 text-xs xl:text-sm 2xl:text-md font-saansMono">{t['About Andrés']}</h2>
             </div>
@@ -58,8 +58,8 @@ export default function Home() {
           </div>
         </section>
         <footer className="mb-7">
-          <div className="grid grid-cols-2 md:grid-cols-4 w-full gap-4">
-            <div className="text-4xl mb-24 w-full col-span-2 flex gap-4 md:gap-10 h-fit items-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 w-full gap-[10px]">
+            <div className="text-4xl mb-24 w-full col-span-2 flex gap-[10px] md:gap-10 h-fit items-center">
               <svg className="w-7/12 md:w-auto" width="264" height="88" viewBox="0 0 264 88" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="88" height="88" rx="44" fill="black"/>
                 <path d="M44.0165 56.2507C37.2014 56.2507 32.2812 51.0978 32.2812 43.9835C32.2812 36.9024 37.2014 31.7495 44.0165 31.7495C50.7652 31.7495 55.7186 36.8692 55.7186 43.9835C55.7186 51.131 50.7652 56.2507 44.0165 56.2507ZM43.9833 53.7906C49.1694 53.7906 52.8928 49.6683 52.8928 43.9835C52.8928 38.3319 49.1694 34.2096 43.9833 34.2096C38.8304 34.2096 35.107 38.3319 35.107 43.9835C35.107 49.6683 38.8304 53.7906 43.9833 53.7906Z" fill="white"/>

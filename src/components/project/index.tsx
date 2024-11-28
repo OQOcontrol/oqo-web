@@ -41,7 +41,7 @@ const Project = ({t}: ProjectProps) => {
   return (
     <section id="project" className="mb-24 md:mb-36">
     <h2 className="mb-24 md:mb-36 text-2xl md:text-4xl 2xl:text-5xl leading-tight md:md:w-10/12 font-abc">{t['Leveraging the advances in new technologies and the development of more efficient sensors, OQO introduces a new approach to audiovisual control.']}</h2>
-      <div className="md:grid grid-cols-2 gap-4 relative">
+      <div className="md:grid grid-cols-2 gap-[10px] relative">
         <h2 className="mb-4 text-xs xl:text-sm 2xl:text-md font-saansMono">{t['The Project']}</h2>
         <div className="mb-24 md:mb-36">
           <p className="mb-4 text-md  md:text-xl 2xl:text-2xl leading-tight">{t['Developed throughout 2023, this innovative design incorporates sensors held by magnets in a vertical and transparent structure.']}</p>
