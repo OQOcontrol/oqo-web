@@ -46,7 +46,7 @@ const Billboard = ({ t }: { t: Record<string, string> }) => {
       }, []);
 
   return (
-    <section id="billboard" className="md:h-screen mb-24 md:mb-36 relative py-2">
+    <section id="billboard" className="md:h-screen mb-24 md:mb-36 relative py-[10px]">
     <div ref={elementRef} className="hidden px-2 md:grid grid-cols-2 gap-4 absolute -rotate-90 top-full origin-top-left	font-saansMono text-grey" style={{width: "100vh", left: `calc(100% - ${height}px)`}}>
       <div className="text-xs 2xl:text-sm pr-16 leading-tight">
         <span>{t['The']}</span>
