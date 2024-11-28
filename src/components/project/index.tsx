@@ -49,7 +49,6 @@ const Project = ({t}: ProjectProps) => {
         start: "-20% 50%",
         end: "70% 50%",
         scrub: true,
-        markers: true,
       },
       });
   
