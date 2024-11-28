@@ -38,27 +38,27 @@ const Project = ({t}: ProjectProps) => {
   });
 
   gsap.fromTo(".strech", {
-      transform: 'scale(1, 7)',
+      transform: 'scale(1, 10)',
     },
     {
       transform: 'scale(1, 1)',
       scrollTrigger: {
       trigger: "#project",
-      start: "top 90%",
-      end: "top 40%",
+      start: "top 50%",
+      end: "70% 50%",
       scrub: true,
     },
     });
 
     gsap.fromTo(".strech2", {
-      transform: 'scale(1, 7)',
+      transform: 'scale(1, 10)',
     },
     {
       transform: 'scale(1, 1)',
       scrollTrigger: {
-      trigger: "#promo",
-      start: "bottom 90%",
-      end: "bottom 40%",
+      trigger: ".strech2",
+      start: "70% 50%",
+      end: "140% 50%",
       scrub: true,
     },
     });

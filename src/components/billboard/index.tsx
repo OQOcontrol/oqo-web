@@ -10,6 +10,7 @@ gsap.registerPlugin(useGSAP);
 
 const Billboard = ({ t }: { t: Record<string, string> }) => {
     useGSAP(() => {
+
         gsap.fromTo(
             ".knob-main",
             {
@@ -25,6 +26,22 @@ const Billboard = ({ t }: { t: Record<string, string> }) => {
               },
             }
           )
+
+        gsap.fromTo(
+          ".strechTitle",
+          {
+            transform: 'scale(1, 1)',
+          },
+          {
+            transform: 'scale(1, 14)',
+              scrollTrigger: {
+              trigger: "#billboard",
+              start: "top 0",
+              end: "bottom 0",
+              scrub: true,
+            },
+          }
+        )
       });
 
 
@@ -66,7 +83,7 @@ const Billboard = ({ t }: { t: Record<string, string> }) => {
       <circle cx="237" cy="237" r="237" fill="black"/>
       </svg>
     </div>
-    <h1 className="block md:absolute text-2xl md:text-4xl 2xl:text-5xl md:w-8/12 top-0 font-abc leading-tight">
+    <h1 className="strechTitle block md:absolute text-2xl md:text-4xl 2xl:text-5xl md:w-8/12 top-0 font-abc leading-tight">
       <span>{t['The']}</span>
       <span className="font-saans">{t[' OQO ']}</span>
       <span>{t['(o-cu-o) is a device with wireless sensors that allows for real-time modulation of sounds, lights, and visuals.']}</span>
