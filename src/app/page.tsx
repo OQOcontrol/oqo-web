@@ -100,7 +100,7 @@ export default function Home() {
               </div>
               <div className="font-saansMono mb-4 text-xs xl:text-sm 2xl:text-md">
                 <div>Jana Travé</div>
-                <div className="text-grey">Dancer</div>
+                <div className="text-grey">Movement director & dancer</div>
               </div>
               <div className="font-saansMono mb-4 text-xs xl:text-sm 2xl:text-md">
                 <div>Sara Lee</div>

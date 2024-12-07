@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useRef } from 'react'
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -14,6 +14,8 @@ interface ProjectProps {
 }
 
 const Project = ({t}: ProjectProps) => {
+  const animationTargetRef = useRef<HTMLDivElement>(null);
+
     useGSAP(() => {
     gsap.to(".knob2", {
         rotation: 0,
@@ -40,28 +42,29 @@ const Project = ({t}: ProjectProps) => {
   
   gsap.matchMedia().add("(min-width: 768px)", () => { //desktop code
     gsap.fromTo(".strech", {
-        transform: 'scale(1, 10)',
+        transform: 'scale(1, 1)',
       },
       {
-        transform: 'scale(1, 1)',
+        transform: 'scale(1, 8)',
         scrollTrigger: {
         trigger: "#project",
-        start: "-20% 50%",
-        end: "70% 50%",
+        start: "60% 50%",
+        end: "100% 50%",
         scrub: true,
       },
       });
   
-      gsap.fromTo(".strech2", {
-        transform: 'scale(1, 10)',
+      gsap.fromTo(animationTargetRef.current, {
+        transform: 'scale(1, 1)',
       },
       {
-        transform: 'scale(1, 1)',
+        transform: 'scale(1, 6)',
         scrollTrigger: {
-        trigger: ".strech2",
-        start: "50% 50%",
-        end: "140% 50%",
+        trigger: animationTargetRef.current,
+        start: "800% 50%",
+        end: "1000% 50%",
         scrub: true,
+
       },
       });
     });
@@ -124,7 +127,9 @@ const Project = ({t}: ProjectProps) => {
           <path d="M107 111L182 35" stroke="black" strokeWidth="6"/>
         </svg>
       </div>
-      <h2 className="strech2 mb-24 md:mb-36 text-2xl md:text-4xl 2xl:text-5xl leading-tight md:w-10/12 font-abc">{t['It’s not just about technology, but about how it can redefine the connection between artists and audiences, creating an audiovisual experience that challenges conventional approaches to live performances.']}</h2>  
+      <div id="projectTitle">
+        <h2 ref={animationTargetRef} className="strech2 mb-24 md:mb-36 text-2xl md:text-4xl 2xl:text-5xl leading-tight md:w-10/12 font-abc">{t['It’s not just about technology, but about how it can redefine the connection between artists and audiences, creating an audiovisual experience that challenges conventional approaches to live performances.']}</h2>  
+      </div>
     </section>
   )
 }
